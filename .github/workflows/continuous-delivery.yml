@@ -29,5 +29,6 @@ jobs:
     - name: Build & Deploy
       run: |
         flutter packages get
+        npm install
         npm run build
         npm run deploy
