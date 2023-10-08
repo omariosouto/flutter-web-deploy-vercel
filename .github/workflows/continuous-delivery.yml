@@ -1,4 +1,4 @@
-name: CD - Flutter Web
+name: Continuous Delivery - Flutter Web
 
 on:
   push:
