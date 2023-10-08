@@ -14,7 +14,19 @@ jobs:
   deploy_web:
     runs-on: ubuntu-latest
     steps:
-    - uses: devsoutinho/flutter-composite-action@v4.0.1
+    ## [Common_CI_Steps]
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - name: Setup Node
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.3.4'
+        channel: 'stable' # or: 'beta', 'dev' or 'master'
+    ## ======
     - name: Build & Deploy
       run: |
         flutter packages get
